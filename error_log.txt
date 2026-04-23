@@ -1,0 +1,4 @@
+System.TypeLoadException: Could not load type 'System.Text.Encoding' from assembly 'System.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+   at BCrypt.Net.BCrypt.Verify(String text, String hash, Boolean enhancedEntropy, HashType hashType)
+   at GymManagement.DataAccess.DAUser.Login(String emailOrPhone, String password) in D:\GymManagement\GymManagement\DataAccess\DAUser.cs:line 222
+   at GymManagement.Controllers.UserController.Login(UserRequestModel req) in D:\GymManagement\GymManagement\Controllers\UserController.cs:line 95
