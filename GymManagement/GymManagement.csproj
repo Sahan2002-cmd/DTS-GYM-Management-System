@@ -79,9 +79,6 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.1\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Bcl.TimeProvider, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Bcl.TimeProvider.8.0.1\lib\net462\Microsoft.Bcl.TimeProvider.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -125,9 +122,6 @@
     <Reference Include="System.Collections.Specialized, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Collections.Specialized.4.3.0\lib\net46\System.Collections.Specialized.dll</HintPath>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Configuration.ConfigurationManager, Version=10.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Configuration.ConfigurationManager.10.0.5\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SqlClient, Version=4.6.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -389,8 +383,6 @@
     <Content Include="bin\Microsoft.ApplicationBlocks.Data.dll" />
     <Content Include="bin\Microsoft.Bcl.AsyncInterfaces.dll" />
     <Content Include="bin\Microsoft.Bcl.AsyncInterfaces.xml" />
-    <Content Include="bin\Microsoft.Bcl.TimeProvider.dll" />
-    <Content Include="bin\Microsoft.Bcl.TimeProvider.xml" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="bin\Microsoft.Extensions.Logging.Abstractions.dll" />
@@ -452,8 +444,6 @@
     <Content Include="bin\Stripe.net.xml" />
     <Content Include="bin\System.Buffers.dll" />
     <Content Include="bin\System.Buffers.xml" />
-    <Content Include="bin\System.Configuration.ConfigurationManager.dll" />
-    <Content Include="bin\System.Configuration.ConfigurationManager.xml" />
     <Content Include="bin\System.Data.SqlClient.dll" />
     <Content Include="bin\System.Data.SqlClient.xml" />
     <Content Include="bin\System.Diagnostics.DiagnosticSource.dll" />
@@ -549,23 +539,6 @@
     <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\netstandard2.0\BCrypt.Net-Next.xml" />
     <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\netstandard2.1\BCrypt.Net-Next.dll" />
     <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\netstandard2.1\BCrypt.Net-Next.xml" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\ico.png" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\lib\net10.0\BCrypt.Net-Next.dll" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\lib\net10.0\BCrypt.Net-Next.xml" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\lib\net20\BCrypt.Net-Next.dll" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\lib\net20\BCrypt.Net-Next.xml" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\lib\net35\BCrypt.Net-Next.dll" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\lib\net35\BCrypt.Net-Next.xml" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\lib\net462\BCrypt.Net-Next.dll" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\lib\net462\BCrypt.Net-Next.xml" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\lib\net472\BCrypt.Net-Next.dll" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\lib\net472\BCrypt.Net-Next.xml" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\lib\net48\BCrypt.Net-Next.dll" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\lib\net48\BCrypt.Net-Next.xml" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\lib\netstandard2.0\BCrypt.Net-Next.dll" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\lib\netstandard2.0\BCrypt.Net-Next.xml" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\lib\netstandard2.1\BCrypt.Net-Next.dll" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\lib\netstandard2.1\BCrypt.Net-Next.xml" />
     <Content Include="packages\bootstrap.5.2.3\bootstrap.png" />
     <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.css" />
     <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css" />
@@ -885,16 +858,6 @@
     <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.9.0.1\LICENSE.TXT" />
     <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.9.0.1\THIRD-PARTY-NOTICES.TXT" />
     <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.9.0.1\useSharedDesignerContext.txt" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\Icon.png" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\lib\net462\Microsoft.Bcl.TimeProvider.dll" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\lib\net462\Microsoft.Bcl.TimeProvider.xml" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\lib\net8.0\Microsoft.Bcl.TimeProvider.dll" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\lib\net8.0\Microsoft.Bcl.TimeProvider.xml" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\lib\netstandard2.0\Microsoft.Bcl.TimeProvider.dll" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\lib\netstandard2.0\Microsoft.Bcl.TimeProvider.xml" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\LICENSE.TXT" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\THIRD-PARTY-NOTICES.TXT" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\useSharedDesignerContext.txt" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe" />
@@ -1080,19 +1043,6 @@
     <Content Include="packages\System.Collections.Specialized.4.3.0\ref\netstandard1.3\zh-hans\System.Collections.Specialized.xml" />
     <Content Include="packages\System.Collections.Specialized.4.3.0\ref\netstandard1.3\zh-hant\System.Collections.Specialized.xml" />
     <Content Include="packages\System.Collections.Specialized.4.3.0\ThirdPartyNotices.txt" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\Icon.png" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\lib\net10.0\System.Configuration.ConfigurationManager.dll" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\lib\net10.0\System.Configuration.ConfigurationManager.xml" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\lib\net462\System.Configuration.ConfigurationManager.dll" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\lib\net462\System.Configuration.ConfigurationManager.xml" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\lib\net8.0\System.Configuration.ConfigurationManager.dll" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\lib\net8.0\System.Configuration.ConfigurationManager.xml" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\lib\net9.0\System.Configuration.ConfigurationManager.dll" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\lib\net9.0\System.Configuration.ConfigurationManager.xml" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\lib\netstandard2.0\System.Configuration.ConfigurationManager.dll" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\lib\netstandard2.0\System.Configuration.ConfigurationManager.xml" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\THIRD-PARTY-NOTICES.TXT" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\useSharedDesignerContext.txt" />
     <Content Include="packages\System.Data.SqlClient.4.9.1\Icon.png" />
     <Content Include="packages\System.Data.SqlClient.4.9.1\lib\net462\System.Data.SqlClient.dll" />
     <Content Include="packages\System.Data.SqlClient.4.9.1\lib\net462\System.Data.SqlClient.xml" />
@@ -1327,9 +1277,6 @@
     <Content Include="public\index.html" />
     <Content Include="packages\Antlr.3.5.0.2\.signature.p7s" />
     <Content Include="packages\Antlr.3.5.0.2\Antlr.3.5.0.2.nupkg" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\.signature.p7s" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\BCrypt.Net-Next.4.1.0.nupkg" />
-    <Content Include="packages\BCrypt.Net-Next.4.1.0\readme.md" />
     <Content Include="packages\bootstrap.5.2.3\.signature.p7s" />
     <Content Include="packages\bootstrap.5.2.3\bootstrap.5.2.3.nupkg" />
     <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.css.map" />
@@ -1439,13 +1386,6 @@
     <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.9.0.1\buildTransitive\netcoreapp2.0\Microsoft.Bcl.AsyncInterfaces.targets" />
     <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.9.0.1\Microsoft.Bcl.AsyncInterfaces.9.0.1.nupkg" />
     <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.9.0.1\PACKAGE.md" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\.signature.p7s" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\buildTransitive\net461\Microsoft.Bcl.TimeProvider.targets" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\buildTransitive\net462\_._" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\buildTransitive\net6.0\_._" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\buildTransitive\netcoreapp2.0\Microsoft.Bcl.TimeProvider.targets" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\Microsoft.Bcl.TimeProvider.8.0.1.nupkg" />
-    <Content Include="packages\Microsoft.Bcl.TimeProvider.8.0.1\PACKAGE.md" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\.signature.p7s" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
@@ -1535,13 +1475,6 @@
     <Content Include="packages\System.Collections.Specialized.4.3.0\ref\xamarintvos10\_._" />
     <Content Include="packages\System.Collections.Specialized.4.3.0\ref\xamarinwatchos10\_._" />
     <Content Include="packages\System.Collections.Specialized.4.3.0\System.Collections.Specialized.4.3.0.nupkg" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\.signature.p7s" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\buildTransitive\net461\System.Configuration.ConfigurationManager.targets" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\buildTransitive\net462\_._" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\buildTransitive\net8.0\_._" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\buildTransitive\netcoreapp2.0\System.Configuration.ConfigurationManager.targets" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\PACKAGE.md" />
-    <Content Include="packages\System.Configuration.ConfigurationManager.10.0.5\System.Configuration.ConfigurationManager.10.0.5.nupkg" />
     <Content Include="packages\System.Data.SqlClient.4.9.1\.signature.p7s" />
     <Content Include="packages\System.Data.SqlClient.4.9.1\buildTransitive\net461\System.Data.SqlClient.targets" />
     <Content Include="packages\System.Data.SqlClient.4.9.1\buildTransitive\net462\_._" />
