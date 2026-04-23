@@ -1,0 +1,10 @@
+.vs/
+bin/
+obj/
+packages/
+node_modules/
+Uploads/
+*.user
+*.suo
+Web.config
+Views/Web.config
