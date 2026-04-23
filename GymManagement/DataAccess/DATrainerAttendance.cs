@@ -1,4 +1,4 @@
-﻿// ============================================================
+// ============================================================
 //  File : DataAccess/DATrainerAttendance.cs
 // ============================================================
 using GymManagement.Database_Layer;
@@ -75,8 +75,8 @@ namespace GymManagement.DataAccess
                                     ? Convert.ToInt32(row["trainerId"]) : (int?)null,
                                 trainerName = row.Table.Columns.Contains("trainerName")
                                     ? row["trainerName"]?.ToString() : null,
-                                check_in_time = row["check_in_time"]?.ToString(),
-                                check_out_time = row["check_out_time"]?.ToString()
+                                checkInTime = row["check_in_time"]?.ToString(),
+                                checkOutTime = row["check_out_time"]?.ToString()
                             });
                         result.ResultSet = list;
                     }
