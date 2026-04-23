@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -37,11 +37,13 @@ namespace GymManagement.Database_Layer
                     }
 
                     // Output parameters
-                    result.ResultStatusCode =
-                        cmd.Parameters["@p_result_status_code"].Value?.ToString() ?? "1";
+                    result.ResultStatusCode = cmd.Parameters.Contains("@p_result_status_code")
+                        ? cmd.Parameters["@p_result_status_code"].Value?.ToString() ?? "1"
+                        : "1";
 
-                    result.ExceptionMessage =
-                        cmd.Parameters["@p_exception_message"].Value?.ToString();
+                    result.ExceptionMessage = cmd.Parameters.Contains("@p_exception_message")
+                        ? cmd.Parameters["@p_exception_message"].Value?.ToString()
+                        : null;
                 }
             }
             catch (Exception ex)
@@ -64,11 +66,13 @@ namespace GymManagement.Database_Layer
                 {
                     cmd.ExecuteNonQuery();
 
-                    result.ResultStatusCode =
-                        cmd.Parameters["@p_result_status_code"].Value?.ToString() ?? "1";
+                    result.ResultStatusCode = cmd.Parameters.Contains("@p_result_status_code")
+                        ? cmd.Parameters["@p_result_status_code"].Value?.ToString() ?? "1"
+                        : "1";
 
-                    result.ExceptionMessage =
-                        cmd.Parameters["@p_exception_message"].Value?.ToString();
+                    result.ExceptionMessage = cmd.Parameters.Contains("@p_exception_message")
+                        ? cmd.Parameters["@p_exception_message"].Value?.ToString()
+                        : null;
                 }
             }
             catch (Exception ex)
@@ -102,12 +106,6 @@ namespace GymManagement.Database_Layer
                 cmd.Parameters.AddWithValue(paramName, value);
             }
 
-            // Standard OUTPUT params
-            cmd.Parameters.Add("@p_result_status_code", SqlDbType.Int)
-                .Direction = ParameterDirection.Output;
-
-            cmd.Parameters.Add("@p_exception_message", SqlDbType.NVarChar, 500)
-                .Direction = ParameterDirection.Output;
 
             return cmd;
         }

@@ -7,7 +7,12 @@ export const fetchEquipment = () => async (dispatch) => {
   dispatch({ type: ACTIONS.FETCH_EQUIPMENT_REQUEST });
   try {
     const res = await api.getAllEquipment();
-    dispatch({ type: ACTIONS.FETCH_EQUIPMENT_SUCCESS, payload: res.data?.ResultSet || [] });
+    if (isSuccess(res.data)) {
+      dispatch({ type: ACTIONS.FETCH_EQUIPMENT_SUCCESS, payload: res.data?.ResultSet || [] });
+    } else {
+      dispatch({ type: ACTIONS.FETCH_EQUIPMENT_FAILURE });
+      dispatch(showToast(getErrorMsg(res.data) || 'Failed to load equipment', 'error'));
+    }
   } catch { dispatch({ type: ACTIONS.FETCH_EQUIPMENT_FAILURE }); }
 };
 

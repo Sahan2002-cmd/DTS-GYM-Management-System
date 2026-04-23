@@ -7,10 +7,15 @@ export const fetchPayments = () => async (dispatch) => {
   dispatch({ type: ACTIONS.FETCH_PAYMENTS_REQUEST });
   try {
     const res = await api.getAllPayments();
-    dispatch({ type: ACTIONS.FETCH_PAYMENTS_SUCCESS, payload: res.data?.ResultSet || [] });
+    if (isSuccess(res.data)) {
+      dispatch({ type: ACTIONS.FETCH_PAYMENTS_SUCCESS, payload: res.data?.ResultSet || [] });
+    } else {
+      dispatch({ type: ACTIONS.FETCH_PAYMENTS_FAILURE });
+      dispatch(showToast(getErrorMsg(res.data) || 'Failed to load payments', 'error'));
+    }
   } catch {
     dispatch({ type: ACTIONS.FETCH_PAYMENTS_FAILURE });
-    dispatch(showToast('Failed to load payments', 'error'));
+    dispatch(showToast('Connection error', 'error'));
   }
 };
 
@@ -19,7 +24,11 @@ export const fetchPaymentsByMember = (memberId) => async (dispatch) => {
   dispatch({ type: ACTIONS.FETCH_PAYMENTS_REQUEST });
   try {
     const res = await api.getPaymentsByMember(memberId);
-    dispatch({ type: ACTIONS.FETCH_PAYMENTS_SUCCESS, payload: res.data?.ResultSet || [] });
+    if (isSuccess(res.data)) {
+      dispatch({ type: ACTIONS.FETCH_PAYMENTS_SUCCESS, payload: res.data?.ResultSet || [] });
+    } else {
+      dispatch({ type: ACTIONS.FETCH_PAYMENTS_FAILURE });
+    }
   } catch { dispatch({ type: ACTIONS.FETCH_PAYMENTS_FAILURE }); }
 };
 
