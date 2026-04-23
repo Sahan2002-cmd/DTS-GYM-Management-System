@@ -1,26 +1,26 @@
-System.IO.FileLoadException: Could not load file or assembly 'System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
-File name: 'System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'
-   at Microsoft.IdentityModel.Tokens.TokenUtilities.GetClaimValueUsingValueType(Claim claim)
-   at System.IdentityModel.Tokens.Jwt.JwtPayload.AddClaims(IEnumerable`1 claims)
-   at System.IdentityModel.Tokens.Jwt.JwtSecurityToken..ctor(String issuer, String audience, IEnumerable`1 claims, Nullable`1 notBefore, Nullable`1 expires, SigningCredentials signingCredentials)
-   at GymManagement.BusinessLayer.JwtHelper.GenerateToken(UserModel user) in D:\GymManagement\GymManagement\BusinessLayer\JwtHelper.cs:line 63
+System.IO.FileLoadException: Could not load file or assembly 'System.Text.Encodings.Web, Version=4.0.5.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'System.Text.Encodings.Web, Version=4.0.5.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'
+   at System.IdentityModel.Tokens.Jwt.JwtPayload.SerializeToJson()
+   at System.IdentityModel.Tokens.Jwt.JwtPayload.Base64UrlEncode()
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at GymManagement.BusinessLayer.JwtHelper.GenerateToken(UserModel user) in D:\GymManagement\GymManagement\BusinessLayer\JwtHelper.cs:line 72
    at GymManagement.DataAccess.DAUser.Login(String emailOrPhone, String password) in D:\GymManagement\GymManagement\DataAccess\DAUser.cs:line 249
    at GymManagement.Controllers.UserController.Login(UserRequestModel req) in D:\GymManagement\GymManagement\Controllers\UserController.cs:line 95
 
 === Pre-bind state information ===
-LOG: DisplayName = System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+LOG: DisplayName = System.Text.Encodings.Web, Version=4.0.5.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
  (Fully-specified)
 LOG: Appbase = file:///D:/GymManagement/GymManagement/
 LOG: Initial PrivatePath = D:\GymManagement\GymManagement\bin
-Calling assembly : Microsoft.IdentityModel.Tokens, Version=7.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
+Calling assembly : System.IdentityModel.Tokens.Jwt, Version=7.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
 ===
 LOG: This bind starts in default load context.
 LOG: Using application configuration file: D:\GymManagement\GymManagement\web.config
 LOG: Using host configuration file: C:\Users\ASUS\Documents\IISExpress\config\aspnet.config
 LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework64\v4.0.30319\config\machine.config.
-LOG: Post-policy reference: System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
-LOG: Attempting download of new URL file:///C:/Users/ASUS/AppData/Local/Temp/Temporary ASP.NET Files/vs/7d39a60a/3ad6e07/System.Text.Json.DLL.
-LOG: Attempting download of new URL file:///C:/Users/ASUS/AppData/Local/Temp/Temporary ASP.NET Files/vs/7d39a60a/3ad6e07/System.Text.Json/System.Text.Json.DLL.
-LOG: Attempting download of new URL file:///D:/GymManagement/GymManagement/bin/System.Text.Json.DLL.
+LOG: Post-policy reference: System.Text.Encodings.Web, Version=4.0.5.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+LOG: Attempting download of new URL file:///C:/Windows/Microsoft.NET/Framework64/v4.0.30319/Temporary ASP.NET Files/vs/7d39a60a/3ad6e07/System.Text.Encodings.Web.DLL.
+LOG: Attempting download of new URL file:///C:/Windows/Microsoft.NET/Framework64/v4.0.30319/Temporary ASP.NET Files/vs/7d39a60a/3ad6e07/System.Text.Encodings.Web/System.Text.Encodings.Web.DLL.
+LOG: Attempting download of new URL file:///D:/GymManagement/GymManagement/bin/System.Text.Encodings.Web.DLL.
 WRN: Comparing the assembly name resulted in the mismatch: Major Version
 ERR: Failed to complete setup of assembly (hr = 0x80131040). Probing terminated.
