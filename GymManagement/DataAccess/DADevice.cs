@@ -74,32 +74,55 @@ namespace GymManagement.DataAccess
 
         private DeviceModel MapDevice(DataRow row)
         {
-            string SafeStr(params string[] cols) {
-                foreach (var c in cols)
-                    if (row.Table.Columns.Contains(c) && row[c] != DBNull.Value)
-                        return row[c].ToString();
-                return null;
-            }
-            int? SafeInt(params string[] cols) {
-                foreach (var c in cols)
-                    if (row.Table.Columns.Contains(c) && row[c] != DBNull.Value)
-                        return Convert.ToInt32(row[c]);
-                return null;
-            }
+            var cols = row.Table.Columns;
+            
+            int? deviceIdVal = null;
+            if (cols.Contains("deviceId") && row["deviceId"] != DBNull.Value) deviceIdVal = Convert.ToInt32(row["deviceId"]);
+            else if (cols.Contains("DeviceId") && row["DeviceId"] != DBNull.Value) deviceIdVal = Convert.ToInt32(row["DeviceId"]);
+            else if (cols.Contains("device_id") && row["device_id"] != DBNull.Value) deviceIdVal = Convert.ToInt32(row["device_id"]);
 
-            var id = SafeInt("deviceId", "DeviceId", "device_id");
+            string name = null;
+            if (cols.Contains("device_name")) name = row["device_name"]?.ToString();
+            else if (cols.Contains("deviceName")) name = row["deviceName"]?.ToString();
+            else if (cols.Contains("DeviceName")) name = row["DeviceName"]?.ToString();
+
+            string mid = null;
+            if (cols.Contains("machineID")) mid = row["machineID"]?.ToString();
+            else if (cols.Contains("MachineID")) mid = row["MachineID"]?.ToString();
+            else if (cols.Contains("machine_id")) mid = row["machine_id"]?.ToString();
+
+            string p = null;
+            if (cols.Contains("place")) p = row["place"]?.ToString();
+            else if (cols.Contains("Place")) p = row["Place"]?.ToString();
+            else if (cols.Contains("installation_place")) p = row["installation_place"]?.ToString();
+
+            string type = null;
+            if (cols.Contains("deviceType")) type = row["deviceType"]?.ToString();
+            else if (cols.Contains("DeviceType")) type = row["DeviceType"]?.ToString();
+            else if (cols.Contains("type")) type = row["type"]?.ToString();
+
+            string status = null;
+            if (cols.Contains("is_status")) status = row["is_status"]?.ToString();
+            else if (cols.Contains("Is_Status")) status = row["Is_Status"]?.ToString();
+            else if (cols.Contains("status")) status = row["status"]?.ToString();
+
+            string desc = null;
+            if (cols.Contains("description")) desc = row["description"]?.ToString();
+            else if (cols.Contains("Description")) desc = row["Description"]?.ToString();
+            else if (cols.Contains("notes")) desc = row["notes"]?.ToString();
+
             return new DeviceModel
             {
-                DeviceId = id,
-                deviceId = id,
-                deviceName = SafeStr("device_name", "deviceName", "DeviceName"),
-                machineID = SafeStr("machineID", "MachineID", "machine_id"),
-                place = SafeStr("place", "Place", "installation_place"),
-                deviceType = SafeStr("deviceType", "DeviceType", "type"),
-                Is_Status = SafeStr("is_status", "Is_Status", "status"),
-                description = SafeStr("description", "Description", "notes"),
-                created_date = SafeStr("created_date", "CreatedDate"),
-                updated_date = SafeStr("updated_date", "UpdatedDate"),
+                DeviceId = deviceIdVal,
+                deviceId = deviceIdVal,
+                deviceName = name,
+                machineID = mid,
+                place = p,
+                deviceType = type,
+                Is_Status = status,
+                description = desc,
+                created_date = cols.Contains("created_date") ? row["created_date"]?.ToString() : null,
+                updated_date = cols.Contains("updated_date") ? row["updated_date"]?.ToString() : null,
             };
         }
     }

@@ -47,26 +47,25 @@ namespace GymManagement.DataAccess
 
                     // Now fetch the payment to generate receipt
                     var payRes = GetById(newPaymentId);
-                        var list = payRes.ResultSet as List<PaymentModel>;
-                        var payment = (list != null && list.Count > 0) ? list[0] : null;
+                    var list = payRes.ResultSet as List<PaymentModel>;
+                    var payment = (list != null && list.Count > 0) ? list[0] : null;
 
-                        if (payment != null && !string.IsNullOrEmpty(payment.email))
+                    if (payment != null && !string.IsNullOrEmpty(payment.email))
+                    {
+                        var pdfReceiptRes = GenerateReceipt(newPaymentId);
+                        if (pdfReceiptRes.StatusCode == 200 && pdfReceiptRes.ResultSet != null)
                         {
-                            var pdfReceiptRes = GenerateReceipt(newPaymentId);
-                            if (pdfReceiptRes.StatusCode == 200 && pdfReceiptRes.ResultSet != null)
-                            {
-                                string base64Pdf = (string)pdfReceiptRes.ResultSet;
-                                EmailHelper.SendPaymentReceiptEmail(
-                                     toEmail: payment.email,
-                                     memberName: payment.memberName,
-                                     planType: payment.planType,
-                                     amount: payment.paymentAmount ?? 0,
-                                     paymentType: payment.payment_type,
-                                     paymentDate: payment.payment_date,
-                                     paymentId: newPaymentId,
-                                     base64Pdf: base64Pdf
-                                );
-                            }
+                            string base64Pdf = (string)pdfReceiptRes.ResultSet;
+                            EmailHelper.SendPaymentReceiptEmail(
+                                 toEmail: payment.email,
+                                 memberName: payment.memberName,
+                                 planType: payment.planType,
+                                 amount: payment.paymentAmount ?? 0,
+                                 paymentType: payment.payment_type,
+                                 paymentDate: payment.payment_date,
+                                 paymentId: newPaymentId,
+                                 base64Pdf: base64Pdf
+                            );
                         }
                     }
                 }
