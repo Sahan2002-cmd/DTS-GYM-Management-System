@@ -1,4 +1,19 @@
-System.TypeLoadException: Could not load type 'System.Text.Encoding' from assembly 'System.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
-   at BCrypt.Net.BCrypt.Verify(String text, String hash, Boolean enhancedEntropy, HashType hashType)
-   at GymManagement.DataAccess.DAUser.Login(String emailOrPhone, String password) in D:\GymManagement\GymManagement\DataAccess\DAUser.cs:line 222
+System.IO.FileNotFoundException: Could not load file or assembly 'System.Security.Claims, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified.
+File name: 'System.Security.Claims, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+   at GymManagement.BusinessLayer.JwtHelper.GenerateToken(UserModel user)
+   at GymManagement.DataAccess.DAUser.Login(String emailOrPhone, String password) in D:\GymManagement\GymManagement\DataAccess\DAUser.cs:line 249
    at GymManagement.Controllers.UserController.Login(UserRequestModel req) in D:\GymManagement\GymManagement\Controllers\UserController.cs:line 95
+
+=== Pre-bind state information ===
+LOG: DisplayName = System.Security.Claims, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+ (Fully-specified)
+LOG: Appbase = file:///D:/GymManagement/GymManagement/
+LOG: Initial PrivatePath = D:\GymManagement\GymManagement\bin
+Calling assembly : System.IdentityModel.Tokens.Jwt, Version=8.16.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: D:\GymManagement\GymManagement\web.config
+LOG: Using host configuration file: C:\Users\ASUS\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework64\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: System.Security.Claims, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+LOG: The same bind was seen before, and was failed with hr = 0x80070002.
