@@ -89,20 +89,20 @@
     <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.2.1.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=8.16.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.IdentityModel.Abstractions.8.16.0\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=7.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Abstractions.7.6.2\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=8.16.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=7.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Logging, Version=8.16.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.IdentityModel.Logging.8.16.0\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=7.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Logging.7.6.2\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Tokens, Version=8.16.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.IdentityModel.Tokens.8.16.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=7.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Tokens.7.6.2\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -137,8 +137,8 @@
       <HintPath>packages\System.Diagnostics.DiagnosticSource.6.0.2\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
-    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=8.16.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\System.IdentityModel.Tokens.Jwt.8.16.0\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=7.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.IdentityModel.Tokens.Jwt.7.6.2\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Management" />
@@ -845,62 +845,62 @@
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe" />
     <Content Include="packages\Microsoft.Extensions.Logging.Abstractions.2.1.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll" />
     <Content Include="packages\Microsoft.Extensions.Logging.Abstractions.2.1.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\lib\net10.0\Microsoft.IdentityModel.Abstractions.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\lib\net10.0\Microsoft.IdentityModel.Abstractions.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\lib\net462\Microsoft.IdentityModel.Abstractions.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\lib\net462\Microsoft.IdentityModel.Abstractions.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\lib\net472\Microsoft.IdentityModel.Abstractions.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\lib\net472\Microsoft.IdentityModel.Abstractions.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\lib\net6.0\Microsoft.IdentityModel.Abstractions.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\lib\net6.0\Microsoft.IdentityModel.Abstractions.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\lib\net8.0\Microsoft.IdentityModel.Abstractions.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\lib\net8.0\Microsoft.IdentityModel.Abstractions.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\lib\net9.0\Microsoft.IdentityModel.Abstractions.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\lib\net9.0\Microsoft.IdentityModel.Abstractions.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\lib\netstandard2.0\Microsoft.IdentityModel.Abstractions.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\lib\netstandard2.0\Microsoft.IdentityModel.Abstractions.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\lib\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\lib\net10.0\Microsoft.IdentityModel.JsonWebTokens.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\lib\net462\Microsoft.IdentityModel.JsonWebTokens.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\lib\net462\Microsoft.IdentityModel.JsonWebTokens.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\lib\net472\Microsoft.IdentityModel.JsonWebTokens.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\lib\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\lib\net6.0\Microsoft.IdentityModel.JsonWebTokens.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\lib\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\lib\net8.0\Microsoft.IdentityModel.JsonWebTokens.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\lib\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\lib\net9.0\Microsoft.IdentityModel.JsonWebTokens.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\lib\netstandard2.0\Microsoft.IdentityModel.JsonWebTokens.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\lib\netstandard2.0\Microsoft.IdentityModel.JsonWebTokens.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\lib\net10.0\Microsoft.IdentityModel.Logging.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\lib\net10.0\Microsoft.IdentityModel.Logging.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\lib\net462\Microsoft.IdentityModel.Logging.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\lib\net462\Microsoft.IdentityModel.Logging.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\lib\net472\Microsoft.IdentityModel.Logging.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\lib\net472\Microsoft.IdentityModel.Logging.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\lib\net6.0\Microsoft.IdentityModel.Logging.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\lib\net6.0\Microsoft.IdentityModel.Logging.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\lib\net8.0\Microsoft.IdentityModel.Logging.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\lib\net8.0\Microsoft.IdentityModel.Logging.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\lib\net9.0\Microsoft.IdentityModel.Logging.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\lib\net9.0\Microsoft.IdentityModel.Logging.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\lib\netstandard2.0\Microsoft.IdentityModel.Logging.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\lib\netstandard2.0\Microsoft.IdentityModel.Logging.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\lib\net10.0\Microsoft.IdentityModel.Tokens.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\lib\net10.0\Microsoft.IdentityModel.Tokens.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\lib\net462\Microsoft.IdentityModel.Tokens.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\lib\net462\Microsoft.IdentityModel.Tokens.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\lib\net472\Microsoft.IdentityModel.Tokens.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\lib\net472\Microsoft.IdentityModel.Tokens.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\lib\net6.0\Microsoft.IdentityModel.Tokens.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\lib\net6.0\Microsoft.IdentityModel.Tokens.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\lib\net8.0\Microsoft.IdentityModel.Tokens.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\lib\net8.0\Microsoft.IdentityModel.Tokens.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\lib\net9.0\Microsoft.IdentityModel.Tokens.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\lib\net9.0\Microsoft.IdentityModel.Tokens.xml" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\lib\netstandard2.0\Microsoft.IdentityModel.Tokens.dll" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\lib\netstandard2.0\Microsoft.IdentityModel.Tokens.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\lib\net10.0\Microsoft.IdentityModel.Abstractions.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\lib\net10.0\Microsoft.IdentityModel.Abstractions.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\lib\net462\Microsoft.IdentityModel.Abstractions.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\lib\net462\Microsoft.IdentityModel.Abstractions.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\lib\net472\Microsoft.IdentityModel.Abstractions.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\lib\net472\Microsoft.IdentityModel.Abstractions.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\lib\net6.0\Microsoft.IdentityModel.Abstractions.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\lib\net6.0\Microsoft.IdentityModel.Abstractions.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\lib\net8.0\Microsoft.IdentityModel.Abstractions.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\lib\net8.0\Microsoft.IdentityModel.Abstractions.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\lib\net9.0\Microsoft.IdentityModel.Abstractions.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\lib\net9.0\Microsoft.IdentityModel.Abstractions.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\lib\netstandard2.0\Microsoft.IdentityModel.Abstractions.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\lib\netstandard2.0\Microsoft.IdentityModel.Abstractions.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\lib\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\lib\net10.0\Microsoft.IdentityModel.JsonWebTokens.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\lib\net462\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\lib\net462\Microsoft.IdentityModel.JsonWebTokens.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\lib\net472\Microsoft.IdentityModel.JsonWebTokens.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\lib\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\lib\net6.0\Microsoft.IdentityModel.JsonWebTokens.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\lib\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\lib\net8.0\Microsoft.IdentityModel.JsonWebTokens.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\lib\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\lib\net9.0\Microsoft.IdentityModel.JsonWebTokens.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\lib\netstandard2.0\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\lib\netstandard2.0\Microsoft.IdentityModel.JsonWebTokens.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\lib\net10.0\Microsoft.IdentityModel.Logging.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\lib\net10.0\Microsoft.IdentityModel.Logging.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\lib\net462\Microsoft.IdentityModel.Logging.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\lib\net462\Microsoft.IdentityModel.Logging.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\lib\net472\Microsoft.IdentityModel.Logging.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\lib\net472\Microsoft.IdentityModel.Logging.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\lib\net6.0\Microsoft.IdentityModel.Logging.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\lib\net6.0\Microsoft.IdentityModel.Logging.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\lib\net8.0\Microsoft.IdentityModel.Logging.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\lib\net8.0\Microsoft.IdentityModel.Logging.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\lib\net9.0\Microsoft.IdentityModel.Logging.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\lib\net9.0\Microsoft.IdentityModel.Logging.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\lib\netstandard2.0\Microsoft.IdentityModel.Logging.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\lib\netstandard2.0\Microsoft.IdentityModel.Logging.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\lib\net10.0\Microsoft.IdentityModel.Tokens.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\lib\net10.0\Microsoft.IdentityModel.Tokens.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\lib\net462\Microsoft.IdentityModel.Tokens.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\lib\net462\Microsoft.IdentityModel.Tokens.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\lib\net472\Microsoft.IdentityModel.Tokens.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\lib\net472\Microsoft.IdentityModel.Tokens.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\lib\net6.0\Microsoft.IdentityModel.Tokens.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\lib\net6.0\Microsoft.IdentityModel.Tokens.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\lib\net8.0\Microsoft.IdentityModel.Tokens.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\lib\net8.0\Microsoft.IdentityModel.Tokens.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\lib\net9.0\Microsoft.IdentityModel.Tokens.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\lib\net9.0\Microsoft.IdentityModel.Tokens.xml" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\lib\netstandard2.0\Microsoft.IdentityModel.Tokens.dll" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\lib\netstandard2.0\Microsoft.IdentityModel.Tokens.xml" />
     <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.3.2.11\Content\Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.3.2.11\Content\Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
@@ -1011,20 +1011,20 @@
     <Content Include="packages\System.Diagnostics.DiagnosticSource.6.0.2\LICENSE.TXT" />
     <Content Include="packages\System.Diagnostics.DiagnosticSource.6.0.2\THIRD-PARTY-NOTICES.TXT" />
     <Content Include="packages\System.Diagnostics.DiagnosticSource.6.0.2\useSharedDesignerContext.txt" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\lib\net10.0\System.IdentityModel.Tokens.Jwt.dll" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\lib\net10.0\System.IdentityModel.Tokens.Jwt.xml" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\lib\net462\System.IdentityModel.Tokens.Jwt.dll" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\lib\net462\System.IdentityModel.Tokens.Jwt.xml" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\lib\net472\System.IdentityModel.Tokens.Jwt.dll" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\lib\net472\System.IdentityModel.Tokens.Jwt.xml" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\lib\net6.0\System.IdentityModel.Tokens.Jwt.dll" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\lib\net6.0\System.IdentityModel.Tokens.Jwt.xml" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\lib\net8.0\System.IdentityModel.Tokens.Jwt.dll" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\lib\net8.0\System.IdentityModel.Tokens.Jwt.xml" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\lib\net9.0\System.IdentityModel.Tokens.Jwt.dll" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\lib\net9.0\System.IdentityModel.Tokens.Jwt.xml" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\lib\netstandard2.0\System.IdentityModel.Tokens.Jwt.dll" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\lib\netstandard2.0\System.IdentityModel.Tokens.Jwt.xml" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\lib\net10.0\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\lib\net10.0\System.IdentityModel.Tokens.Jwt.xml" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\lib\net462\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\lib\net462\System.IdentityModel.Tokens.Jwt.xml" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\lib\net472\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\lib\net472\System.IdentityModel.Tokens.Jwt.xml" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\lib\net6.0\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\lib\net6.0\System.IdentityModel.Tokens.Jwt.xml" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\lib\net8.0\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\lib\net8.0\System.IdentityModel.Tokens.Jwt.xml" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\lib\net9.0\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\lib\net9.0\System.IdentityModel.Tokens.Jwt.xml" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\lib\netstandard2.0\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\lib\netstandard2.0\System.IdentityModel.Tokens.Jwt.xml" />
     <Content Include="packages\System.Memory.4.6.3\Icon.png" />
     <Content Include="packages\System.Memory.4.6.3\lib\net462\System.Memory.dll" />
     <Content Include="packages\System.Memory.4.6.3\lib\net462\System.Memory.xml" />
@@ -1371,18 +1371,18 @@
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe.config" />
     <Content Include="packages\Microsoft.Extensions.Logging.Abstractions.2.1.0\.signature.p7s" />
     <Content Include="packages\Microsoft.Extensions.Logging.Abstractions.2.1.0\Microsoft.Extensions.Logging.Abstractions.2.1.0.nupkg" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\.signature.p7s" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\Microsoft.IdentityModel.Abstractions.8.16.0.nupkg" />
-    <Content Include="packages\Microsoft.IdentityModel.Abstractions.8.16.0\README.md" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\.signature.p7s" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\Microsoft.IdentityModel.JsonWebTokens.8.16.0.nupkg" />
-    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.8.16.0\README.md" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\.signature.p7s" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\Microsoft.IdentityModel.Logging.8.16.0.nupkg" />
-    <Content Include="packages\Microsoft.IdentityModel.Logging.8.16.0\README.md" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\.signature.p7s" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\Microsoft.IdentityModel.Tokens.8.16.0.nupkg" />
-    <Content Include="packages\Microsoft.IdentityModel.Tokens.8.16.0\README.md" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\.signature.p7s" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\Microsoft.IdentityModel.Abstractions.7.6.2.nupkg" />
+    <Content Include="packages\Microsoft.IdentityModel.Abstractions.7.6.2\README.md" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\.signature.p7s" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\Microsoft.IdentityModel.JsonWebTokens.7.6.2.nupkg" />
+    <Content Include="packages\Microsoft.IdentityModel.JsonWebTokens.7.6.2\README.md" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\.signature.p7s" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\Microsoft.IdentityModel.Logging.7.6.2.nupkg" />
+    <Content Include="packages\Microsoft.IdentityModel.Logging.7.6.2\README.md" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\.signature.p7s" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\Microsoft.IdentityModel.Tokens.7.6.2.nupkg" />
+    <Content Include="packages\Microsoft.IdentityModel.Tokens.7.6.2\README.md" />
     <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.3.2.11\.signature.p7s" />
     <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.3.2.11\Microsoft.jQuery.Unobtrusive.Validation.3.2.11.nupkg" />
     <Content Include="packages\Microsoft.Web.Infrastructure.2.0.0\.signature.p7s" />
@@ -1442,9 +1442,9 @@
     <Content Include="packages\System.Diagnostics.DiagnosticSource.6.0.2\buildTransitive\netcoreapp2.0\System.Diagnostics.DiagnosticSource.targets" />
     <Content Include="packages\System.Diagnostics.DiagnosticSource.6.0.2\buildTransitive\netcoreapp3.1\_._" />
     <Content Include="packages\System.Diagnostics.DiagnosticSource.6.0.2\System.Diagnostics.DiagnosticSource.6.0.2.nupkg" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\.signature.p7s" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\README.md" />
-    <Content Include="packages\System.IdentityModel.Tokens.Jwt.8.16.0\System.IdentityModel.Tokens.Jwt.8.16.0.nupkg" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\.signature.p7s" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\README.md" />
+    <Content Include="packages\System.IdentityModel.Tokens.Jwt.7.6.2\System.IdentityModel.Tokens.Jwt.7.6.2.nupkg" />
     <Content Include="packages\System.Memory.4.6.3\.signature.p7s" />
     <Content Include="packages\System.Memory.4.6.3\buildTransitive\net461\System.Memory.targets" />
     <Content Include="packages\System.Memory.4.6.3\buildTransitive\net462\_._" />
