@@ -74,22 +74,32 @@ namespace GymManagement.DataAccess
 
         private DeviceModel MapDevice(DataRow row)
         {
+            string SafeStr(params string[] cols) {
+                foreach (var c in cols)
+                    if (row.Table.Columns.Contains(c) && row[c] != DBNull.Value)
+                        return row[c].ToString();
+                return null;
+            }
+            int? SafeInt(params string[] cols) {
+                foreach (var c in cols)
+                    if (row.Table.Columns.Contains(c) && row[c] != DBNull.Value)
+                        return Convert.ToInt32(row[c]);
+                return null;
+            }
+
+            var id = SafeInt("deviceId", "DeviceId", "device_id");
             return new DeviceModel
             {
-                DeviceId = row.Table.Columns.Contains("DeviceId") && row["DeviceId"] != DBNull.Value
-                    ? Convert.ToInt32(row["DeviceId"]) : (int?)null,
-                deviceId = row.Table.Columns.Contains("DeviceId") && row["DeviceId"] != DBNull.Value
-                    ? Convert.ToInt32(row["DeviceId"]) : (int?)null,
-                deviceName = row.Table.Columns.Contains("device_name") ? row["device_name"]?.ToString()
-                    : row.Table.Columns.Contains("deviceName") ? row["deviceName"]?.ToString() : null,
-                machineID = row.Table.Columns.Contains("MachineID") ? row["MachineID"]?.ToString() : null,
-                place = row.Table.Columns.Contains("Place") ? row["Place"]?.ToString() : null,
-                deviceType = row.Table.Columns.Contains("DeviceType") ? row["DeviceType"]?.ToString() : null,
-                Is_Status = row.Table.Columns.Contains("is_status") ? row["is_status"]?.ToString() : null,
-                description = row.Table.Columns.Contains("description") ? row["description"]?.ToString() 
-                    : row.Table.Columns.Contains("Description") ? row["Description"]?.ToString() : null,
-                created_date = row.Table.Columns.Contains("created_date") ? row["created_date"]?.ToString() : null,
-                updated_date = row.Table.Columns.Contains("updated_date") ? row["updated_date"]?.ToString() : null,
+                DeviceId = id,
+                deviceId = id,
+                deviceName = SafeStr("device_name", "deviceName", "DeviceName"),
+                machineID = SafeStr("machineID", "MachineID", "machine_id"),
+                place = SafeStr("place", "Place", "installation_place"),
+                deviceType = SafeStr("deviceType", "DeviceType", "type"),
+                Is_Status = SafeStr("is_status", "Is_Status", "status"),
+                description = SafeStr("description", "Description", "notes"),
+                created_date = SafeStr("created_date", "CreatedDate"),
+                updated_date = SafeStr("updated_date", "UpdatedDate"),
             };
         }
     }

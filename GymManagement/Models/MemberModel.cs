@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,6 +21,7 @@ namespace GymManagement.Models
         public string email { get; set; }
         public string phone { get; set; }
         public string status { get; set; }
+        public string profile_image { get; set; }
     }
 
     public class MemberRequestModel : BaseRequestModel

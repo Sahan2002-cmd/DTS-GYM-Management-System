@@ -47,11 +47,10 @@ namespace GymManagement.DataAccess
 
                     // Now fetch the payment to generate receipt
                     var payRes = GetById(newPaymentId);
-                    if (payRes.StatusCode == 200 && payRes.ResultSet != null)
-                    {
-                        var payment = (PaymentModel)payRes.ResultSet;
+                        var list = payRes.ResultSet as List<PaymentModel>;
+                        var payment = (list != null && list.Count > 0) ? list[0] : null;
 
-                        if (!string.IsNullOrEmpty(payment.email))
+                        if (payment != null && !string.IsNullOrEmpty(payment.email))
                         {
                             var pdfReceiptRes = GenerateReceipt(newPaymentId);
                             if (pdfReceiptRes.StatusCode == 200 && pdfReceiptRes.ResultSet != null)
@@ -203,8 +202,10 @@ namespace GymManagement.DataAccess
                 return result;
             }
 
-            var payment = payRes.ResultSet as PaymentModel;
-            if (payment?.payment_type != "Card" ||
+            var list = payRes.ResultSet as List<PaymentModel>;
+            var payment = (list != null && list.Count > 0) ? list[0] : null;
+
+            if (payment == null || payment.payment_type != "Card" ||
                 string.IsNullOrEmpty(payment.stripe_payment_intent_id))
             {
                 result.StatusCode = 400;
@@ -245,8 +246,17 @@ namespace GymManagement.DataAccess
                 return result;
             }
 
-            byte[] pdfBytes = PdfReportGenerator.GeneratePaymentReceipt(
-                                (PaymentModel)payRes.ResultSet);
+            var list = payRes.ResultSet as List<PaymentModel>;
+            var payment = (list != null && list.Count > 0) ? list[0] : null;
+
+            if (payment == null)
+            {
+                result.StatusCode = 404;
+                result.Result = "Payment data not found.";
+                return result;
+            }
+
+            byte[] pdfBytes = PdfReportGenerator.GeneratePaymentReceipt(payment);
 
             result.StatusCode = 200;
             result.ResultSet = Convert.ToBase64String(pdfBytes);
