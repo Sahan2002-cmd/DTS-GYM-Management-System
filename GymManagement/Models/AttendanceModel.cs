@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +9,9 @@ namespace GymManagement.Models
     {
         public int? attendanceId { get; set; }
         public int? memberId { get; set; }
-        public int? rfId_Id { get; set; }
-        public string check_in_time { get; set; }
-        public string check_out_time { get; set; }
+        public int? rfidId { get; set; }
+        public string checkInTime { get; set; }
+        public string checkOutTime { get; set; }
         public string memberName { get; set; }
     }
 

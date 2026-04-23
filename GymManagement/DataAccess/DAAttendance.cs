@@ -1,4 +1,4 @@
-﻿// ============================================================
+// ============================================================
 //  File : DataAccess/DAAttendance.cs
 //  WhatsApp notifications for check-in/check-out
 // ============================================================
@@ -141,9 +141,9 @@ namespace GymManagement.DataAccess
                             {
                                 attendanceId = row["attendanceId"] != DBNull.Value ? Convert.ToInt32(row["attendanceId"]) : (int?)null,
                                 memberId = row["memberId"] != DBNull.Value ? Convert.ToInt32(row["memberId"]) : (int?)null,
-                                rfId_Id = row["rfId_Id"] != DBNull.Value ? Convert.ToInt32(row["rfId_Id"]) : (int?)null,
-                                check_in_time = row["check_in_time"]?.ToString(),
-                                check_out_time = row["check_out_time"]?.ToString(),
+                                rfidId = row["rfId_Id"] != DBNull.Value ? Convert.ToInt32(row["rfId_Id"]) : (int?)null,
+                                checkInTime = row["check_in_time"]?.ToString(),
+                                checkOutTime = row["check_out_time"]?.ToString(),
                                 memberName = row.Table.Columns.Contains("memberName") ? row["memberName"]?.ToString() : null
                             });
                         result.ResultSet = list;

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,8 +10,8 @@ namespace GymManagement.Models
         public int? trainerAttendanceId { get; set; }
         public int? trainerId { get; set; }
         public string trainerName { get; set; }
-        public string check_in_time { get; set; }
-        public string check_out_time { get; set; }
+        public string checkInTime { get; set; }
+        public string checkOutTime { get; set; }
     }
 
     public class TrainerAttendanceRequestModel : BaseRequestModel
