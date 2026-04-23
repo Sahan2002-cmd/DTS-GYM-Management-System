@@ -1,0 +1,25 @@
+import { apiClient, toForm } from './_apiClient';
+export const getAllPlans   = () => apiClient.get('/Plan/GetAll');
+export const getPlanById   = (id) => apiClient.get(`/Plan/GetById?id=${id}`);
+export const addPlan       = (req, adminId) => apiClient.post('/Plan/Add', toForm({ ...req, adminId }));
+export const editPlan      = (req, adminId) => apiClient.post('/Plan/Edit', toForm({ ...req, adminId }));
+export const deletePlan    = (id, adminId)  => apiClient.post('/Plan/Delete', toForm({ id, adminId }));
+export const getAllSubscriptions      = () => apiClient.get('/Subscription/GetAll');
+export const getActiveSubscriptions   = () => apiClient.get('/Subscription/GetActive');
+export const getSubscriptionById      = (id) => apiClient.get(`/Subscription/GetById?id=${id}`);
+export const getSubscriptionsByMember = (memberId) => apiClient.get(`/Subscription/GetByMember?memberId=${memberId}`);
+export const addSubscription          = (req, adminId) => apiClient.post('/Subscription/Add', toForm({ ...req, adminId }));
+export const editSubscription         = (req, adminId) => apiClient.post('/Subscription/Edit', toForm({ ...req, adminId }));
+export const deactivateSubscription   = (id, adminId)  => apiClient.post('/Subscription/Deactivate', toForm({ id, adminId }));
+// FIX: activate endpoint
+export const activateSubscription     = (id, adminId)  => apiClient.post('/Subscription/Activate', toForm({ id, adminId }));
+export const getAllPayments             = () => apiClient.get('/Payment/GetAll');
+export const getPaymentById             = (id) => apiClient.get(`/Payment/GetById?id=${id}`);
+export const getPaymentsByMember        = (memberId) => apiClient.get(`/Payment/GetByMember?memberId=${memberId}`);
+export const getPaymentsBySubscription  = (subscriptionId) => apiClient.get(`/Payment/GetBySubscription?subscriptionId=${subscriptionId}`);
+export const addCashPayment = (req, adminId) => apiClient.post('/Payment/AddCash', toForm({ ...req, adminId, p_admin_id: adminId }));
+export const initiateCardPayment = (req) => apiClient.post('/Payment/InitiateCardPayment', toForm(req));
+export const confirmCardPayment = (paymentIntentId) => apiClient.post('/Payment/ConfirmCardPayment', toForm({ paymentIntentId }));
+export const updatePaymentStatus = (paymentId, status, adminId) => apiClient.post('/Payment/UpdateStatus', toForm({ paymentId, status, adminId }));
+export const refundPayment = (paymentId, adminId) => apiClient.post('/Payment/Refund', toForm({ paymentId, adminId }));
+export const getPaymentReceipt = (paymentId) => apiClient.get(`/Payment/GetReceipt?paymentId=${paymentId}`);
