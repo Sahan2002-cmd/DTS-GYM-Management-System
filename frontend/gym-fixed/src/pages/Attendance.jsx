@@ -134,7 +134,7 @@ export default function Attendance() {
     ? records.filter((r) =>
         String(r.memberId || '').includes(search) ||
         (r.memberName || r.username || '').toLowerCase().includes(search.toLowerCase()) ||
-        (r.rfidId || r.rfidNumber || '').toLowerCase().includes(search.toLowerCase())
+        String(r.rfidId || r.rfidNumber || '').toLowerCase().includes(search.toLowerCase())
       )
     : records;
 

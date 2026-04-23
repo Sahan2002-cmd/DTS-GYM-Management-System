@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,7 +17,7 @@ namespace GymManagement.Models
         public string machineID { get; set; }
         public string place { get; set; }
         public string EquipmentId { get; set; }
-        public string Description { get; set; }
+        public string description { get; set; }
         public string Is_Status { get; set; }
         public string created_date { get; set; }
         public string updated_date { get; set; }

@@ -1,4 +1,4 @@
-﻿// ============================================================
+// ============================================================
 //  File : DataAccess/DAPayment.cs  (Updated with Card Payment)
 //  Proc : GYM_PAYMENT_PROC
 // ============================================================
@@ -266,7 +266,7 @@ namespace GymManagement.DataAccess
                     foreach (DataRow row in res.ResultDataTable.Rows)
                         list.Add(MapRow(row));
 
-                    result.ResultSet = list.Count == 1 ? (object)list[0] : list;
+                    result.ResultSet = list;
                     result.StatusCode = 200;
                 }
                 else

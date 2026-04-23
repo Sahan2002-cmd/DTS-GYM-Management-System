@@ -657,7 +657,7 @@ export function Workouts() {
     { key: 'exerciseId', label: 'ID', width: 60, render: (v, row) => <span className="id-chip">#{v || row.exercise_Id}</span> },
     { key: 'exerciseName', label: 'Exercise', render: (v, row) => <span className="font-semibold" style={{ color: 'var(--gym-text)' }}>{v || row.ExerciseName}</span> },
     { key: 'muscleGroup', label: 'Muscle Group', render: (v, row) => v || row.MuscleGroup || '—' },
-    ...(isAdmin ? [{ key: '_actions', label: '', render: (_, row) => (
+    ...(isAdmin || isTrainer ? [{ key: '_actions', label: '', render: (_, row) => (
       <button className="btn btn-danger btn-sm" onClick={() => handleDeleteExercise(row.exerciseId || row.exercise_Id)}>🗑️ Delete</button>
     )}] : []),
   ];
@@ -670,8 +670,8 @@ export function Workouts() {
           <div className="page-sub">Assign non-equipment routines</div>
         </div>
         <div className="flex gap-2">
-          {tab === 'workouts' && <button className="btn btn-primary" onClick={() => { setWkForm({ p_use_id: '', p_schedule_id: '', p_exercise_id: '', p_sets: '', p_reps: '', p_notes: '', p_sub_status: 'pending' }); setShowWkAdd(true); }}>+ Add Workout</button>}
-          {tab === 'exercises' && isAdmin && <button className="btn btn-primary" onClick={() => setShowExAdd(true)}>+ Add Exercise</button>}
+          {tab === 'workouts' && (isAdmin || isTrainer) && <button className="btn btn-primary" onClick={() => { setWkForm({ p_use_id: '', p_schedule_id: '', p_exercise_id: '', p_sets: '', p_reps: '', p_notes: '', p_sub_status: 'pending' }); setShowWkAdd(true); }}>+ Add Workout</button>}
+          {tab === 'exercises' && (isAdmin || isTrainer) && <button className="btn btn-primary" onClick={() => setShowExAdd(true)}>+ Add Exercise</button>}
         </div>
       </div>
 

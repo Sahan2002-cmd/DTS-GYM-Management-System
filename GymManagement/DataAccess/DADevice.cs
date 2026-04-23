@@ -1,4 +1,4 @@
-﻿using GymManagement.Database_Layer;
+using GymManagement.Database_Layer;
 using GymManagement.Interfaces;
 using GymManagement.Models;
 using System;
@@ -86,6 +86,8 @@ namespace GymManagement.DataAccess
                 place = row.Table.Columns.Contains("Place") ? row["Place"]?.ToString() : null,
                 deviceType = row.Table.Columns.Contains("DeviceType") ? row["DeviceType"]?.ToString() : null,
                 Is_Status = row.Table.Columns.Contains("is_status") ? row["is_status"]?.ToString() : null,
+                description = row.Table.Columns.Contains("description") ? row["description"]?.ToString() 
+                    : row.Table.Columns.Contains("Description") ? row["Description"]?.ToString() : null,
                 created_date = row.Table.Columns.Contains("created_date") ? row["created_date"]?.ToString() : null,
                 updated_date = row.Table.Columns.Contains("updated_date") ? row["updated_date"]?.ToString() : null,
             };

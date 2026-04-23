@@ -8,6 +8,7 @@ export const addRfidTag = (req, adminId) =>
     p_is_active:   req.p_is_active ?? 1,
     p_rfid_number: req.p_rfid_number || '',
     p_admin_id:    adminId,
+    adminId:       adminId,
   }));
 export const editRfidTag        = (req, adminId) => apiClient.post('/RfidTag/Edit', toForm({ ...req, adminId }));
 export const deleteRfidTag      = (id, adminId)  => apiClient.post('/RfidTag/Delete', toForm({ id, adminId }));
