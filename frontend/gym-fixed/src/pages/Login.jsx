@@ -24,6 +24,7 @@ export default function Login() {
   const [fpMsgType, setFpMsgType] = useState('info');
   const [gLoading,  setGLoading]  = useState(false);
   const [gError,    setGError]    = useState('');
+  const [gEmail,    setGEmail]    = useState('');
 
   useEffect(() => { document.documentElement.setAttribute('data-theme', theme); }, [theme]);
   useEffect(() => { if (user) navigate('/dashboard'); }, [user, navigate]);
@@ -55,6 +56,9 @@ export default function Login() {
         dispatch({ type: ACTIONS.SHOW_TOAST, payload: { message: 'Welcome, ' + userObj.username + '!', type: 'success', id: Date.now() } });
       } else {
         setGError(data?.Result || 'Google sign-in failed.');
+        if (data?.Result?.toLowerCase().includes('register first')) {
+          setGEmail(email);
+        }
       }
     } catch { setGError('Google sign-in failed. Please use email/password login instead.'); }
     finally { setGLoading(false); }
@@ -247,7 +251,7 @@ export default function Login() {
               <div className="flex items-center gap-2">
                 <span>⚠</span> {error}
               </div>
-              {(error.toLowerCase().includes('not registered') || error.toLowerCase().includes('email not found')) && (
+              {(error.toLowerCase().includes('not registered') || error.toLowerCase().includes('account not found') || error.toLowerCase().includes('register first')) && (
                 <Link 
                   to={`/register?email=${encodeURIComponent(form.email)}`} 
                   className="btn btn-secondary btn-sm mt-2 w-full justify-center"
@@ -274,7 +278,20 @@ export default function Login() {
         <div className="flex flex-col items-center gap-2">
           {gLoading ? <div className="flex items-center gap-2 text-sm" style={{ color: 'var(--gym-muted)' }}><svg className="animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>Signing in with Google…</div>
             : <div id="google-signin-btn" />}
-          {gError && <div className="w-full px-3 py-2 rounded-xl text-xs" style={{ background: 'rgba(255,71,71,.06)', border: '1px solid rgba(255,71,71,.2)', color: 'var(--gym-accent2)' }}><div className="font-semibold mb-1">⚠ {gError}</div></div>}
+          {gError && (
+            <div className="w-full flex flex-col gap-2 px-3 py-2 rounded-xl text-xs" style={{ background: 'rgba(255,71,71,.06)', border: '1px solid rgba(255,71,71,.2)', color: 'var(--gym-accent2)' }}>
+              <div className="font-semibold">⚠ {gError}</div>
+              {gError.toLowerCase().includes('register first') && (
+                <Link 
+                  to={`/register?email=${encodeURIComponent(gEmail || '')}`} 
+                  className="btn btn-secondary btn-sm w-full justify-center mt-1"
+                  style={{ background: 'rgba(255,71,71,.1)', color: 'var(--gym-accent2)', border: '1px solid var(--gym-accent2)', fontSize: '10px' }}
+                >
+                  Register First
+                </Link>
+              )}
+            </div>
+          )}
         </div>
 
         <div className="mt-5 text-center space-y-3">

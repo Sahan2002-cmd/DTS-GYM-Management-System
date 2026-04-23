@@ -211,7 +211,7 @@ namespace GymManagement.DataAccess
                 if (res.ResultStatusCode != "1" || res.ResultDataTable.Rows.Count == 0)
                 {
                     result.StatusCode = 401;
-                    result.Result = "Invalid email/phone or password.";
+                    result.Result = "Account not found. Please register first.";
                     return result;
                 }
 
@@ -273,7 +273,11 @@ namespace GymManagement.DataAccess
                     result.StatusCode = 200;
                     result.ResultSet = new { user, token };
                 }
-                else { result.StatusCode = 500; result.Result = res.ExceptionMessage; }
+                else 
+                { 
+                    result.StatusCode = 404; 
+                    result.Result = "Account not found. Please register first."; 
+                }
             }
             return result;
         }
