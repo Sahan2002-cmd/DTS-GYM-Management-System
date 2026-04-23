@@ -6,6 +6,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from '../../actions';
 import { ROLES } from '../../constants';
+import { getImgUrl } from '../../utils';
 
 const NAV_ADMIN = [
   { section: 'Overview', items: [
@@ -179,8 +180,8 @@ export default function Sidebar({ onClose }) {
             {/* Gym image */}
             <div className="w-full h-24 rounded-xl overflow-hidden mb-3" style={{ border: '1px solid var(--gym-border)' }}>
               <img
-                src={ROLE_AVATARS[roleKey]}
-                alt="Gym"
+                src={user?.profile_image ? getImgUrl(user.profile_image) : ROLE_AVATARS[roleKey]}
+                alt="Profile"
                 className="w-full h-full object-cover"
                 style={{ opacity: 0.85 }}
               />
@@ -208,7 +209,7 @@ export default function Sidebar({ onClose }) {
           {/* Avatar with gym image overlay */}
           <div className="relative w-9 h-9 rounded-xl overflow-hidden flex-shrink-0" style={{ border: `2px solid ${roleColor}` }}>
             <img
-              src={ROLE_AVATARS[roleKey]}
+              src={user?.profile_image ? getImgUrl(user.profile_image) : ROLE_AVATARS[roleKey]}
               alt=""
               className="w-full h-full object-cover"
               style={{ opacity: 0.7 }}

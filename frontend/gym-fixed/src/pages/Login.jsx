@@ -243,8 +243,19 @@ export default function Login() {
           </div>
 
           {error && (
-            <div className="flex items-center gap-2 px-4 py-3 rounded-xl text-sm" style={{ background: 'rgba(255,71,71,.08)', border: '1px solid rgba(255,71,71,.22)', color: 'var(--gym-accent2)' }}>
-              <span>⚠</span> {error}
+            <div className="flex flex-col gap-2 p-4 rounded-xl text-sm" style={{ background: 'rgba(255,71,71,.08)', border: '1px solid rgba(255,71,71,.22)', color: 'var(--gym-accent2)' }}>
+              <div className="flex items-center gap-2">
+                <span>⚠</span> {error}
+              </div>
+              {(error.toLowerCase().includes('not registered') || error.toLowerCase().includes('email not found')) && (
+                <Link 
+                  to={`/register?email=${encodeURIComponent(form.email)}`} 
+                  className="btn btn-secondary btn-sm mt-2 w-full justify-center"
+                  style={{ background: 'rgba(255,71,71,.1)', color: 'var(--gym-accent2)', border: '1px solid var(--gym-accent2)' }}
+                >
+                  Register First
+                </Link>
+              )}
             </div>
           )}
 

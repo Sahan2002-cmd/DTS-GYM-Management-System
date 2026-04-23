@@ -8,7 +8,7 @@
 //    • Fixed image upload (AllowAnonymous + proper response handling)
 // ============================================================
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import * as api from '../services/api';
 
@@ -17,11 +17,20 @@ const MAX_BYTES = MAX_MB * 1024 * 1024;
 
 export default function AddUser() {
   const navigate = useNavigate();
+  const location = useLocation();
   const user  = useSelector((s) => s.auth.user);
   const theme = useSelector((s) => s.ui.theme);
 
   useEffect(() => { if (user) navigate('/dashboard'); }, [user, navigate]);
   useEffect(() => { document.documentElement.setAttribute('data-theme', theme); }, [theme]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const emailParam = params.get('email');
+    if (emailParam) {
+      setForm(f => ({ ...f, email: emailParam }));
+    }
+  }, [location]);
 
   // ── Form state ─────────────────────────────────────────────
   const [form, setForm] = useState({

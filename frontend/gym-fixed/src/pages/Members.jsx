@@ -83,8 +83,12 @@ export default function Members() {
     { key: 'firstName',   label: 'Name',     render: (v, row) => (
       <button className="flex items-center gap-2 text-left" style={{ background:'none', border:'none', cursor:'pointer' }}
         onClick={() => { setCardData(row); setShowCard(true); }}>
-        <div className="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold" style={{ background:'rgba(71,255,154,.15)', color:'var(--gym-success)', fontFamily:"'Space Mono',monospace" }}>
-          {(v||'M').charAt(0).toUpperCase()}
+        <div className="w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden" style={{ background:'rgba(71,255,154,.15)', color:'var(--gym-success)', fontFamily:"'Space Mono',monospace" }}>
+          {row.profile_image ? (
+            <img src={getImgUrl(row.profile_image)} alt="" className="w-full h-full object-cover" />
+          ) : (
+            <span className="font-bold text-xs">{(v||'M').charAt(0).toUpperCase()}</span>
+          )}
         </div>
         <span className="font-medium" style={{ color:'var(--gym-text)' }}>{v} {row.lastName}</span>
       </button>
@@ -129,8 +133,12 @@ export default function Members() {
             <div key={m.memberId} className="card p-5 space-y-3 cursor-pointer" onClick={() => { setCardData(m); setShowCard(true); }}>
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold" style={{ background:'rgba(71,255,154,.15)', color:'var(--gym-success)', fontFamily:"'Space Mono',monospace" }}>
-                    {(m.firstName||'M').charAt(0).toUpperCase()}
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden" style={{ background:'rgba(71,255,154,.15)', color:'var(--gym-success)', fontFamily:"'Space Mono',monospace" }}>
+                    {m.profile_image ? (
+                      <img src={getImgUrl(m.profile_image)} alt="" className="w-full h-full object-cover" />
+                    ) : (
+                      <span className="font-bold text-xl">{(m.firstName||'M').charAt(0).toUpperCase()}</span>
+                    )}
                   </div>
                   <div>
                     <div className="font-semibold" style={{ color:'var(--gym-text)' }}>{m.firstName} {m.lastName}</div>
@@ -216,8 +224,12 @@ export default function Members() {
         {cardData && (
           <div className="modal-body space-y-4">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold" style={{ background:'rgba(71,255,154,.15)', color:'var(--gym-success)', fontFamily:"'Space Mono',monospace" }}>
-                {(cardData.firstName||'M').charAt(0).toUpperCase()}
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center overflow-hidden" style={{ background:'rgba(71,255,154,.15)', color:'var(--gym-success)', fontFamily:"'Space Mono',monospace" }}>
+                {cardData.profile_image ? (
+                  <img src={getImgUrl(cardData.profile_image)} alt="" className="w-full h-full object-cover" />
+                ) : (
+                  <span className="font-bold text-2xl">{(cardData.firstName||'M').charAt(0).toUpperCase()}</span>
+                )}
               </div>
               <div>
                 <div className="text-xl font-bold" style={{ color:'var(--gym-text)' }}>{cardData.firstName} {cardData.lastName}</div>

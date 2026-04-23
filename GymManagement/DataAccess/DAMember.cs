@@ -1,4 +1,4 @@
-﻿using GymManagement.Database_Layer;
+using GymManagement.Database_Layer;
 using GymManagement.Interfaces;
 using GymManagement.Models;
 using System;
@@ -127,7 +127,8 @@ namespace GymManagement.DataAccess
             rfId_Id = row["rfId_Id"] != DBNull.Value ? Convert.ToInt32(row["rfId_Id"]) : (int?)null,
             email = row.Table.Columns.Contains("email") ? row["email"]?.ToString() : null,
             phone = row.Table.Columns.Contains("phone") ? row["phone"]?.ToString() : null,
-            status = row.Table.Columns.Contains("status") ? row["status"]?.ToString() : null
+            status = row.Table.Columns.Contains("status") ? row["status"]?.ToString() : null,
+            profile_image = row.Table.Columns.Contains("profile_image") ? row["profile_image"]?.ToString() : null
         };
     }
 }
