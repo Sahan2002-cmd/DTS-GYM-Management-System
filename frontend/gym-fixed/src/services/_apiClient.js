@@ -3,11 +3,11 @@
 //  Shared Axios instance + form helper used by all service files
 // ============================================================
 import axios from 'axios';
+import { API_BASE_URL } from '../constants';
 
-// ✅ CRITICAL: baseURL must be EMPTY to use Vite proxy (see vite.config.js)
-// The proxy forwards all /User, /Member, etc. requests to https://localhost:44305
+// Use the configured API backend host for all service requests.
 export const apiClient = axios.create({
-  baseURL: '',   // ← empty = relative URLs → browser requests go to Vite dev server
+  baseURL: API_BASE_URL,
 });
 
 // Attach JWT token from localStorage on every request + handle Content-Type
